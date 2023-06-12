@@ -1,4 +1,4 @@
--m pip install --upgrade pip
+--upgrade pip
 gunicorn
 flask
 scikit-learn
