@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Eligibility Check</title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/Advertise.css') }}"
+  />
+
+  </head>
+ 
+    </nav>
+  </head>
+<body>
+      <div class="container">
+        <div class="text">Loan Defaultor Prediction</div>
+        <form action="/predict" method = 'post'>
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="number" name = "Loan_Amount" required>
+                 <div class="underline"></div>
+                 <label for="">Loan Amount</label>
+              </div>
+              <div class="input-data">
+               <input type="number" name = "Funded_amount" required>
+               <div class="underline"></div>
+               <label for="">Funded Amount</label>
+            </div>
+              <div class="input-data">
+                 <input type="number" name = "Funded_Amount_Investor" required>
+                 <div class="underline"></div>
+                 <label for="">Funded Amount Investor</label>
+              </div>
+              <div class="input-data">
+                <input type="number" name = "Home_Ownership" required>
+                <div class="underline"></div>
+                <label for="">Home Ownership</label>
+             </div>
+           </div><br>
+           <div class="form-row">
+            <div class="input-data">
+               <input type="number" name = "Recieving_Balance" required>
+               <div class="underline"></div>
+               <label for="">Recieving Balance</label>
+            </div>
+            <div class="input-data">
+               <input type="number" name = "Total_Recieved_Interest" required>
+               <div class="underline"></div>
+               <label for="">Total Recieved Interest</label>
+            </div>
+            <div class="input-data">
+              <input type="number" name = "Recoveries" required>
+              <div class="underline"></div>
+              <label for="">Recoveries</label>
+           </div>
+         </div><br>
+
+         <div class="form-row">
+          <div class="input-data">
+             <input type="number" name = "Total_Collection_Amount" required>
+             <div class="underline"></div>
+             <label for="">Total Collection Amount</label>
+          </div>
+          <div class="input-data">
+             <input type="number" name = "Total_Current_Balance" required>
+             <div class="underline"></div>
+             <label for="">Total Current Balance</label>
+          </div>
+          <div class="input-data">
+            <input type="number" name = "Total_Revolving_Credit_Limit" required>
+            <div class="underline"></div>
+            <label for="">Total Revolving Credit Limit</label>
+         </div>
+       </div><br>
+            <div class="form-row submit-btn">
+              <div class="input-data">
+                <div class="inner"></div>
+                  <input type="submit" value="Predict">
+            </div>  
+        </form>
+     </div>
+  
+    </body>
+</html>
